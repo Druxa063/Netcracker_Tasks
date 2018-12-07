@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="taskJavaScript.js"></script>
+</head>
+<body>
+<form method="get">
+    <dl>
+        <dt>Number Worker:</dt>
+        <dd><input type="text" name="numberWorker"></dd>
+    </dl>
+    <button onclick="checkNumber();">Submit</button>
+</form>
+<br/>
+<form method="get">
+    <table id="tableForm">
+        <tr>
+            <td id="tdForm1">Name:</td>
+        </tr>
+        <tr>
+            <td id="tdForm2"><input id="idNameWorker" onmouseover="formOverSetValue();" onmouseout="formOutSetValue();" type="text" name="nameWorker" value="например, Иванов"></td>
+        </tr>
+        <tr>
+            <td id="tdForm3"><input type="button" onclick="redirect();" value="Submit"/></td>
+        </tr>
+    </table>
+</form>
+<br/>
+<form method="get" action="getAll">
+    <input type="button" value="Get all workers">
+</form>
+<br/>
+<a href="create" target="_blank"></a>
+<div>
+    <table id="table" width="100%" border="1px" cellspacing="0px" align="center">
+        <tr>
+            <th>&nbsp</th>
+            <th>Number</th>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Date of hiring</th>
+            <th>Department</th>
+            <th>Delete</th>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td><a href="1">1</a></td>
+            <td>Name1</td>
+            <td>Developer</td>
+            <td>01/10/2018</td>
+            <td><p>Netcracker</p></td>
+            <td><a onclick="deleteRow(this);" href="javascript:void(0);">Delete</a></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td><a href="2">2</a></td>
+            <td>Name2</td>
+            <td>Developer</td>
+            <td>01/10/2018</td>
+            <td><p>Netcracker</p></td>
+            <td><a onclick="deleteRow(this);" href="javascript:void(0);">Delete</a></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td><a href="3">3</a></td>
+            <td>Name3</td>
+            <td>Developer</td>
+            <td>01/10/2018</td>
+            <td><p>Netcracker</p></td>
+            <td><a onclick="deleteRow(this);" href="#">Delete</a></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td><a href="4">4</a></td>
+            <td>Name4</td>
+            <td>Developer</td>
+            <td>01/10/2018</td>
+            <td><p>Netcracker</p></td>
+            <td><a onclick="deleteRow(this);" href="javascript:void(0);">Delete</a></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td><a href="5">5</a></td>
+            <td>Name5</td>
+            <td>Developer</td>
+            <td>01/10/2018</td>
+            <td><p>Netcracker</p></td>
+            <td><a onclick="deleteRow(this);" href="javascript:void(0);">Delete</a></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td><a href="6">6</a></td>
+            <td>Name6</td>
+            <td>Developer</td>
+            <td>01/10/2018</td>
+            <td><p>Netcracker</p></td>
+            <td><a onclick="deleteRow(this);" href="javascript:void(0);">Delete</a></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td><a href="7">7</a></td>
+            <td>Name7</td>
+            <td>Developer</td>
+            <td>01/10/2018</td>
+            <td><p>Netcracker</p></td>
+            <td><a onclick="deleteRow(this);" href="javascript:void(0);">Delete</a></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td><a href="8">8</a></td>
+            <td>Name8</td>
+            <td>Developer</td>
+            <td>01/10/2018</td>
+            <td><p>Netcracker</p></td>
+            <td><a onclick="deleteRow(this);" href="javascript:void(0);">Delete</a></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td><a href="9">9</a></td>
+            <td>Name9</td>
+            <td>Developer</td>
+            <td>01/10/2018</td>
+            <td><p>Netcracker</p></td>
+            <td><a onclick="deleteRow(this);" href="javascript:void(0);">Delete</a></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td><a href="10">10</a></td>
+            <td>Name10</td>
+            <td>Developer</td>
+            <td>01/10/2018</td>
+            <td><p>Netcracker</p></td>
+            <td><a onclick="deleteRow(this);" href="javascript:void(0);">Delete</a></td>
+        </tr>
+    </table>
+</div>
+</body>
+<!--<script language="javascript" type="text/javascript">-->
+<!--function formOverSetValue() {-->
+    <!--var x = document.getElementById("idNameWorker").value;-->
+        <!--if (x == "например, Иванов") {-->
+        <!--document.getElementById("idNameWorker").value = "";-->
+    <!--}-->
+    <!--return false;-->
+<!--}-->
+
+<!--function formOutSetValue() {-->
+    <!--var x = document.getElementById("idNameWorker").value;-->
+    <!--if (x == "") {-->
+        <!--document.getElementById("idNameWorker").value = "например, Иванов";-->
+    <!--}-->
+    <!--return false;-->
+<!--}-->
+
+<!--function checkNumber() {-->
+    <!--var x = document.forms[0].numberWorker.value;-->
+    <!--var patt1 = /\w/g;-->
+    <!--if (patt1.test(x) || x == "") {-->
+        <!--alert("необходимо ввести число");-->
+    <!--}-->
+    <!--return false;-->
+<!--}-->
+
+<!--function deleteRow(r) {-->
+    <!--var check = confirm("Do you want to remove?");-->
+    <!--if (check) {-->
+        <!--var i = r.parentNode.parentNode.rowIndex;-->
+        <!--document.getElementById("table").deleteRow(i);-->
+    <!--}-->
+<!--}-->
+
+<!--function redirect() {-->
+    <!--window.location.href = "taskJavaScript.html?nameWorker=" + document.getElementById("idNameWorker").value;-->
+<!--}-->
+<!--</script>-->
+</html>

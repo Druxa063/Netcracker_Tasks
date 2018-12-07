@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Save Worker</title>
+</head>
+<body onload="onLoad();" >
+<form>
+    Last Name:
+    <input type="text" name="nameWorker">
+    <button onclick="">Save</button>
+</form>
+</body>
+<script language="javascript" type="text/javascript">
+function onLoad() {
+    var paramValue = window.location.href.split("?")[1].split("=")[1];
+    document.forms[0].nameWorker.value = paramValue;
+}
+</script>
+</html>

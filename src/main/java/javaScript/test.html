@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="C:/Users/User/Documents/библиотека java/bootbox.min.js"></script>
+</head>
+<body>
+<table border="1px" id="table">
+    <head id="head"> <td>Фамилия</td> <td>Имя</td> </head>
+    <tr> <td>Иванов</td> <td>Иван</td> </tr>
+</table>
+<form name="mainform">
+    Фамилия:
+    <input type="text" name="sname"/><br/>
+    Имя:
+    <input type="text" name="fname"/><br/>
+    <input type="submit" name="addition" value="Добавить"
+           onClick="appendToTable(document.forms[0].elements[1].value, document.mainform.sname.value); return false;"/>
+</form>
+<a href="javascript:appendToTable(document.mainform.fname.value,
+                                      document.mainform.sname.value);
+             void(0);">Добавить</a>
+<button onclick="deleteRow()"></button>
+<script>
+      function appendToTable(fname, sname) {
+        var table = document.getElementById("table");
+        var row = document.createElement("tr");
+        var surname = document.createElement("td");
+        var firstname = document.createElement("td");
+        surname.innerHTML = sname;
+        firstname.innerHTML = fname;
+        row.appendChild(surname);
+        row.appendChild(firstname);
+        table.appendChild(row);
+      }
+      function deleteRow() {
+    var check = confirm({
+    message: "This is a confirm with custom button text and color! Do you like it?",
+    buttons: {
+        confirm: {
+            label: 'Yes',
+
+        },
+        cancel: {
+            label: 'No',
+
+        }
+    },
+    callback: function (result) {
+        return result;
+    }
+});
+}
+    </script>
+</body>
+</html>

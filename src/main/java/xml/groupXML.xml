@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE group SYSTEM "C:\Users\User\IdeaProjects\Netcracker_Task_XML\src\main\xml\group.dtd">
+<group>
+    <student firstname="Andrey" lastname="Semikopeykin" groupnumber="hard">
+        <subject title="javaSE" mark="4"/>
+        <subject title="javaEE" mark="3"/>
+        <average>3.5</average>
+    </student>
+    <student firstname="FirstName" lastname="LastName" groupnumber="1">
+        <subject title="javaSE" mark="5"/>
+        <subject title="javaEE" mark="5"/>
+        <average>3.5</average>
+    </student>
+    <student firstname="SecondName" lastname="SecondName" groupnumber="1">
+        <subject title="javaSE" mark="5"/>
+        <subject title="javaEE" mark="1"/>
+    </student>
+</group>

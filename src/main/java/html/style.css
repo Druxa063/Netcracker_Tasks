@@ -1,0 +1,35 @@
+#tableForm {
+    font-family: arial;
+    width: 12%;
+}
+
+#tdForm1 {
+    background-color: white;
+    text-align: left;
+}
+
+#tdForm2 {
+    background-color: blue;
+    text-align: left;
+}
+
+#tdForm3 {
+    background-color: red;
+    text-align: left;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 2px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}

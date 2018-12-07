@@ -1,0 +1,6 @@
+Exception :
+External DTD:
+Failed to read external DTD ‘.dtd’, because ‘file’ access is not allowed due to restriction set by the accessExternalDTD property
+Solution :
+Add the following property to your vm arguments.
+-Djavax.xml.accessExternalDTD=all

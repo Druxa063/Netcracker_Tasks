@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<group>
+    <student firstname="Andrey" groupnumber="hard" lastname="Semikopeykin">
+        <subject mark="4" title="javaSE"/>
+        <subject mark="3" title="javaEE"/>
+        <average>3.5</average>
+    <average>3.5</average>
+    </student>
+    <student firstname="FirstName" groupnumber="1" lastname="LastName">
+        <subject mark="5" title="javaSE"/>
+        <subject mark="5" title="javaEE"/>
+        <average>5.0</average>
+    <average>5.0</average>
+    </student>
+    <student firstname="SecondName" groupnumber="1" lastname="SecondName">
+        <subject mark="5" title="javaSE"/>
+        <subject mark="1" title="javaEE"/>
+    <average>3.0</average>
+    </student>
+</group>

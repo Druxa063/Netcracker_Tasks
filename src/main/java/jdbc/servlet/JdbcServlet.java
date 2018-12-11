@@ -3,7 +3,6 @@ package jdbc.servlet;
 import jdbc.model.Department;
 import jdbc.model.Employee;
 import jdbc.repository.JdbcDao;
-import jdbc.repository.JdbcDaoImpl;
 
 import javax.ejb.EJB;
 import javax.servlet.RequestDispatcher;
@@ -12,18 +11,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 
 public class JdbcServlet extends HttpServlet {
 
-    @EJB
+    @EJB(beanName = "JPADaoImpl")
     private JdbcDao jdbcDao;
 
     @Override

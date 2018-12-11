@@ -1,22 +1,43 @@
 package jdbc.model;
 
+import javax.persistence.*;
 import java.util.Date;
 
+@Entity()
+@Table(name = "EMP")
 public class Employee {
 
-    private int empno;
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(name = "empno")
+    private Integer empno;
+
+    @Column(name = "ename")
     private String ename;
+
+    @Column(name = "job")
     private String job;
-    private int mgr;
+
+    @Column(name = "mgr")
+    private Integer mgr;
+
+    @Column(name = "hiredate")
     private Date hireDate;
-    private int salary;
-    private int comm;
+
+    @Column(name = "sal")
+    private Integer salary;
+
+    @Column(name = "comm")
+    private Integer comm;
+
+    @ManyToOne()
+    @JoinColumn(name = "deptno")
     private Department dept;
 
     public Employee() {
     }
 
-    public Employee(int empno, String ename, String job, int mgr, Date hireDate, int salary, int comm, Department dept) {
+    public Employee(Integer empno, String ename, String job, Integer mgr, Date hireDate, Integer salary, Integer comm, Department dept) {
         this.empno = empno;
         this.ename = ename;
         this.job = job;
@@ -51,11 +72,11 @@ public class Employee {
         this.job = job;
     }
 
-    public int getMgr() {
+    public Integer getMgr() {
         return mgr;
     }
 
-    public void setMgr(int mgr) {
+    public void setMgr(Integer mgr) {
         this.mgr = mgr;
     }
 
@@ -67,19 +88,19 @@ public class Employee {
         this.hireDate = hireDate;
     }
 
-    public int getSalary() {
+    public Integer getSalary() {
         return salary;
     }
 
-    public void setSalary(int salary) {
+    public void setSalary(Integer salary) {
         this.salary = salary;
     }
 
-    public int getComm() {
+    public Integer getComm() {
         return comm;
     }
 
-    public void setComm(int comm) {
+    public void setComm(Integer comm) {
         this.comm = comm;
     }
 

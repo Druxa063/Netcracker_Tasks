@@ -4,6 +4,15 @@
 		 http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
 
+    <!--Message Bean Task-->
+    <servlet>
+        <servlet-name>messageBean</servlet-name>
+        <servlet-class>messageDriverBean.MessageServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>messageBean</servlet-name>
+        <url-pattern>/messageBean</url-pattern>
+    </servlet-mapping>
     <!--Session Bean Task-->
     <servlet>
         <servlet-name>calculationServletSessionBean</servlet-name>

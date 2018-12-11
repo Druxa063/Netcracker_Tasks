@@ -1,9 +1,20 @@
 package jdbc.model;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "DEPT")
 public class Department {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(name = "deptno")
     private int deptno;
+
+    @Column(name = "dname")
     private String dname;
+
+    @Column(name = "loc")
     private String loc;
 
     public Department() {

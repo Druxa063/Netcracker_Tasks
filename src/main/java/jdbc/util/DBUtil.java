@@ -15,6 +15,7 @@ public class DBUtil {
     public static Connection getConnection() {
         Connection connection = null;
         try {
+//            pool tomcat
             Context context = new InitialContext();
             Context envContext  = (Context)context.lookup("java:/comp/env");
             DataSource dataSource = (DataSource) envContext.lookup("jdbc/employee");

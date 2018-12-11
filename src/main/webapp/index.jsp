@@ -8,6 +8,7 @@
   <%--<jsp:forward page="/jdbcServlet" />--%>
   <br>
   <p>Click <a href="/hello.png">here</a> to download hello-world picture</p>
-  <a href="calculation">Calculation</a>
+  <a href="calculation">Calculation</a><br>
+  <a href="messageBean">Message Bean</a>
   </body>
 </html>

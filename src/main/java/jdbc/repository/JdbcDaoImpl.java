@@ -9,7 +9,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@Stateless
+@Stateless(name = "JdbcDaoImpl")
 public class JdbcDaoImpl implements JdbcDao {
 
     public JdbcDaoImpl() {

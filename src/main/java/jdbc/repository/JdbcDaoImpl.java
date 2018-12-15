@@ -67,6 +67,7 @@ public class JdbcDaoImpl implements JdbcDao {
     }
 
     public List<Employee> getAll() throws SQLException {
+        System.out.println("JDBC---------getAll");
         List<Employee> list = new ArrayList<Employee>();
         try (Connection connection = DBUtil.getConnection();
         Statement statement = connection.createStatement();

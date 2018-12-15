@@ -4,6 +4,19 @@
 		 http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
 
+    <!--EJB3-->
+    <servlet>
+        <servlet-name>ejb3</servlet-name>
+        <servlet-class>ejb3.MessageServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ejb3</servlet-name>
+        <url-pattern>/ejb3send</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ejb3</servlet-name>
+        <url-pattern>/ejb3list</url-pattern>
+    </servlet-mapping>
     <!--Message Bean Task-->
     <servlet>
         <servlet-name>messageBean</servlet-name>

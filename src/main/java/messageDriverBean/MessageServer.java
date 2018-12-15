@@ -16,15 +16,15 @@ public class MessageServer implements MessageListener {
 
     @Override
     public void onMessage(Message message) {
-        if (message instanceof TextMessage) {
-            TextMessage textMessage = (TextMessage) message;
-            try {
-                dao.save(textMessage.getText(), textMessage.getJMSTimestamp());
-            } catch (JMSException e) {
-                e.printStackTrace();
-            }
-        } else {
-            dao.save("Wrong message type!", new Date().getTime());
-        }
+//        if (message instanceof TextMessage) {
+//            TextMessage textMessage = (TextMessage) message;
+//            try {
+//                dao.save(textMessage.getText(), textMessage.getJMSTimestamp());
+//            } catch (JMSException e) {
+//                e.printStackTrace();
+//            }
+//        } else {
+//            dao.save("Wrong message type!", new Date().getTime());
+//        }
     }
 }

@@ -37,6 +37,7 @@ public class JPADaoImpl implements JdbcDao {
 
     @Override
     public List<Employee> getAll() throws SQLException {
+        System.out.println("JPA ----------- getAll");
         Query query = entityManager.createQuery("SELECT e FROM Employee e");
         return query.getResultList();
     }

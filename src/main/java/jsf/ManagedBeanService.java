@@ -22,12 +22,6 @@ public class ManagedBeanService {
         range = new ArrayList<>();
     }
 
-    public Integer findNumber() {
-
-        return null;
-    }
-
-
     public String initRange() {
         for (int i = min; i <= max; i++) {
             range.add(i);
@@ -49,23 +43,13 @@ public class ManagedBeanService {
         List<Integer> subList = range.subList(range.size()/2, range.size());
         range.removeAll(subList);
         System.out.println("Less Range -- " + range);
-//        if (range.isEmpty()) {
-//            return "scam";
-//        }
         return play();
     }
 
     public String moreNumber() {
-        List<Integer> subList = range.subList(0, range.size()/2);
+        List<Integer> subList = range.subList(0, (range.size()/2) + 1);
         range.removeAll(subList);
-        range.remove(0);
         System.out.println("More Range -- " + range);
-//        if (range.size() < 2) {
-//            return "scam";
-//        }
-//        if (range.size() == 2) {
-//            range.remove(0);
-//        }
         return play();
     }
 
